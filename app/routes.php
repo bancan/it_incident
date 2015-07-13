@@ -36,5 +36,14 @@ Route::get('incident_id/{id}', 'IncidentController@select_incident');
 
 Route::get('edit_incident/{id}', 'IncidentController@edit_incident');
 
+Route::get('create_incident', 'IncidentController@create_incident');
+
+// Route::get('create_incident', function()
+// 	{
+// 		echo "sakljflkajflksa";
+// 	});
+
+
+
 
 

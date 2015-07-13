@@ -17,7 +17,16 @@
 	<?php
 	}
 	?>	
-		
+
+	<?php
+	$list = [];
+	foreach ($category as $value) {
+		$list[$value->category_id] = $value->category_name;
+	}
+	?>
+	{{Form::open()}}
+	{{Form::select('category',$list,'')}}
+	{{Form::close()}}
 
 </body>
 </html>

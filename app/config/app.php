@@ -192,6 +192,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 	),
-define('BASE', 'http://localhost:81/it_incident/')
+define('BASE', 'http://localhost/it_incident/')
 
 );

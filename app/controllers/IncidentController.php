@@ -7,8 +7,16 @@ class IncidentController extends BaseController {
 		$incident = new Incident ();
 		$result = $incident->list_incident ();
 
-		return View::make('incident')-> with('incident',$result);
+		// var_dump($result);
+		return View::make('incident/incident')-> with('incident',$result);
 	}
+
+	public function create_incident ()
+	{
+		
+		return View::make('incident/incident_form');
+	}
+
 	public function select_incident ($id)
 	{
 		//echo $id;

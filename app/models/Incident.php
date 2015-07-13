@@ -18,10 +18,10 @@ class Incident extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function list_incident (){
 		$query = DB::table('fact_incident')
-					->leftjoin('dim_group','fact_incident.incident_group','=', 'dim_group.group_id')
-					->leftjoin('dim_status','fact_incident.incident_status','=', 'dim_status.status_id')
-					->leftjoin('dim_resolver','fact_incident.incident_resolver','=', 'dim_resolver.resolver_id')
-					->leftjoin('dim_category','fact_incident.incident_category','=', 'dim_category.category_id')
+					->leftjoin('dim_group','fact_incident.group_id','=', 'dim_group.group_id')
+					->leftjoin('dim_status','fact_incident.status_id','=', 'dim_status.status_id')
+					->leftjoin('dim_resolver','fact_incident.resolver_id','=', 'dim_resolver.resolver_id')
+					->leftjoin('dim_category','fact_incident.category_id','=', 'dim_category.category_id')
 					->get();
 
 		//var_dump($query);
